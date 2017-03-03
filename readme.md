@@ -76,3 +76,31 @@ git commit -a
 ## 撤销操作
 
 ## 远程仓库的使用
+### 查看远程仓库
+- origin 是远程仓库的默认名称
+
+```javascript
+git remote
+```
+### 添加远程仓库
+- shortname 不可省略
+```javascript
+git remote add  <shortname> http:github.com/Learn_Git/git
+```
+
+### 从远程仓库中抓取
+- 访问远程仓库，从中拉取新数据
+-  git fetch 命令会将数据拉取到你的本地仓库，它并不会自动合并或修改你当前的工作。当准备好时你必须手动将其合并入你的工
+  作。
+- git pull :
+    - git pull 命令来自动的抓取然后合并远程分支到当前分支;
+    - 默认情况下，git clone 命令会自动设置本地 master 分支跟踪克隆的远程仓库的 master 分支（或不管是什么名字的默认分支）
+    - 运行 git pull 通常会从最初克隆的服务器上抓取数据并自动尝试合并到当前所在的分支 
+```javascript
+git fetch [remote-name]
+```
+
+### 推送到远程仓库
+```javascript
+git push [remote-name] [branch-name]
+```
